@@ -19,9 +19,9 @@ export const App = (props) => {
   }
 
   return (
-    <div>
+    <div class="body">
       <h1>Welcome to Remembery!</h1>
-      <div class="body">
+      <div>
         <ul>
           {apps}
         </ul>
