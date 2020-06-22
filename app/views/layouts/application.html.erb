@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Remembery</title>
+  <title class='green-text'>Remembery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <nav class="top-bar">
+  <nav class="top-bar brown-background green-text">
     <h1><a href="/">Remembery</a></h1>
 
     <section class="top-bar-section">
@@ -30,7 +30,9 @@
     </div>
   <%- end -%>
 
-  <%= yield %>
+  <div class='body'>
+    <%= yield %>
+  </div>
 
   <%= javascript_include_tag 'application' %>
 

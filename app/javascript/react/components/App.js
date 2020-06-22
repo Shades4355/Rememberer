@@ -19,7 +19,7 @@ export const App = (props) => {
   }
 
   return (
-    <div class="body">
+    <div className='textbox'>
       <h1>Welcome to Remembery!</h1>
       <div>
         <ul>
