@@ -24,6 +24,7 @@ li {
 
 .textbox {
   margin: 30px;
+  margin-top: 0;
   background-color: $cream;
   border: 1px solid black;
   opacity: 0.6;
@@ -33,8 +34,12 @@ h1, h2, h3, title {
   font-family: "Sriracha";
 }
 
-.brown-background, li {
+.brown-background {
   background: $light-brown;
+
+  li {
+    background-color: $light-brown;
+  }
 }
 
 .green-text, a {
