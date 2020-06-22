@@ -21,7 +21,7 @@ export const App = (props) => {
   return (
     <div>
       <h1>Welcome to Remembery!</h1>
-      <div>
+      <div class="body">
         <ul>
           {apps}
         </ul>
