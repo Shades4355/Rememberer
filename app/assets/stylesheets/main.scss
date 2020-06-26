@@ -1,7 +1,7 @@
 // colors
 $cream: #FFFEF2;
 $light-brown: #987654;
-$green: #00ac00;
+$dark-grey: #2B2D2F;
 
 // fonts
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
@@ -44,4 +44,7 @@ h1, h2, h3, title {
 
 .black-text, a {
   color: black;
+  &:hover {
+    color: $dark-grey
+  }
 }
