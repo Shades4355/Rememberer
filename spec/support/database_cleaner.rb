@@ -1,17 +1,18 @@
-RSpec.configure do |config|
+# frozen_string_literal: true
 
+RSpec.configure do |config|
   # before each test suite, dump the database completely
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end
 
-  # “sets the default database cleaning strategy to be transactions”
+  # "sets the default database cleaning strategy to be transactions"
   #
   config.before(:each) do
     DatabaseCleaner.strategy = :transaction
   end
 
-  config.before(:each, :js => true) do
+  config.before(:each, js: true) do
     DatabaseCleaner.strategy = :truncation
   end
 
