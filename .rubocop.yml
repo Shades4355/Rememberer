@@ -1,0 +1,37 @@
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'spec/spec_helper.rb'
+    - 'tmp/**/*'
+    - '.git/**/*'
+    - 'bin/*'
+    - 'config/puma.rb'
+    - 'config/initializers/*.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Lint/InterpolationCheck:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/BarePercentLiterals:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/RedundantPercentQ:
+  Exclude:
+    - 'spec/**/*.rb'
