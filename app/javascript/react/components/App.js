@@ -1,6 +1,7 @@
 import React from 'react'
 
 import AppList from './AppList'
+import NewsFeed from './NewsFeed'
 
 export const App = (props) => {
   let appsArray = null
@@ -19,12 +20,20 @@ export const App = (props) => {
   }
 
   return (
-    <div className='textbox'>
-      <h1>Welcome to Remembery!</h1>
-      <div>
-        <ul>
-          {apps}
-        </ul>
+    <div className='grid-x margin-grid-x'>
+      <div className='textbox small-6'>
+        <h1>Welcome to Remembery!</h1>
+        <div>
+          <ul>
+            {apps}
+          </ul>
+        </div>
+      </div>
+
+      <div className='small-6'>
+        <div className='textbox'>
+            <NewsFeed />
+        </div>
       </div>
     </div>
   )
