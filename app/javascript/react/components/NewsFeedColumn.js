@@ -1,14 +1,15 @@
 import React, { useState, useEffect} from 'react'
 
+import Feed from './Feed'
+
 const NewsFeedColumn = () => {
-  const [newsfeed, setNewsfeed] = useState()
+  const [newsfeed, setNewsfeed] = useState([{story: 'Updates Coming Soon'}])
 
   useEffect(() =>{
     fetch('/api/v1/newsfeeds',
     {credentials: 'same-origin'})
     .then(response => {
       if (response.ok) {
-        debugger
         return response
       } else {
         let errorMessage = `${response.status} (${response.statusText})`,
@@ -23,12 +24,22 @@ const NewsFeedColumn = () => {
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   },[])
 
+  let feed = newsfeed.map(storyfeed => {
+    return (
+      <Feed
+        story={storyfeed.story}
+      />
+    )
+  })
+
+
+
   return (
     <div>
       <h1> Newsfeed </h1>
-      <div>
-        {newsfeed}
-      </div>
+      <ul>
+        {feed}
+      </ul>
     </div>
   )
 }
