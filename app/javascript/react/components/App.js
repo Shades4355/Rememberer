@@ -1,7 +1,7 @@
 import React from 'react'
 
 import AppList from './AppList'
-import NewsFeed from './NewsFeed'
+import NewsFeedColumn from './NewsFeedColumn'
 
 export const App = (props) => {
   let appsArray = null
@@ -32,7 +32,7 @@ export const App = (props) => {
 
       <div className='small-6'>
         <div className='textbox'>
-            <NewsFeed />
+            <NewsFeedColumn />
         </div>
       </div>
     </div>

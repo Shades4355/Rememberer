@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 
-const NewsFeed = () => {
+const NewsFeedColumn = () => {
   const [newsfeed, setNewsfeed] = useState()
 
   useEffect(() =>{
@@ -8,6 +8,7 @@ const NewsFeed = () => {
     {credentials: 'same-origin'})
     .then(response => {
       if (response.ok) {
+        debugger
         return response
       } else {
         let errorMessage = `${response.status} (${response.statusText})`,
@@ -32,4 +33,4 @@ const NewsFeed = () => {
   )
 }
 
-export default NewsFeed
+export default NewsFeedColumn

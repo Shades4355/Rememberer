@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Newsfeed.create([{story: "This is a triumph; I'm making a note here, 'huge success'"},{story: "Link was spotted hiding in the code; and has been removed."}])
