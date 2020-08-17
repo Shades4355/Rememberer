@@ -29,8 +29,9 @@ export const App = (props) => {
           </ul>
         </div>
       </div>
-
-      <div className='small-6'>
+      <div className='small-1'>
+      </div>
+      <div className='small-5'>
         <div className='textbox'>
             <NewsFeedColumn />
         </div>
