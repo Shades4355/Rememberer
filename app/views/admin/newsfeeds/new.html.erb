@@ -1,10 +1,10 @@
 <div class="grid-container, textbox">
   <div class='grid-x grid-margin-x align-center'>
-    <div class='bodysmall-12 medium-3'>
-      <% form_for :feed do |f| %>
-        <%= f.label :story %>
+    <div class='small-12 medium-6'>
+      <%= form_for :feed do |f| %>
+        <%= f.label :story, 'Newfeed Update' %>
         <%= f.text_area :story %>
-        
+
         <%= f.submit %>
       <% end %>
     </div>
