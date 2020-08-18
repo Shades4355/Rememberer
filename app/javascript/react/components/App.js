@@ -44,7 +44,7 @@ const App = (props) => {
   }
 
   let handleButtonClick = () => {
-    return <Redirect to={'/admin/newsfeeds/new'}/>
+    return window.location.href='/admin/newsfeeds/new'
   }
 
   let newPost;
