@@ -26,11 +26,6 @@ class Admin::NewsfeedsController < ApplicationController
     end
   end
 
-  def destroy
-    binding.pry
-    feed = Newsfeed.find(params['id'])
-  end
-
   private
 
   def feed_params

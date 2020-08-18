@@ -28,6 +28,7 @@ const NewsFeedColumn = () => {
     return (
       <Feed
         story={storyfeed.story}
+        index={storyfeed.id}
         key={index}
       />
     )
