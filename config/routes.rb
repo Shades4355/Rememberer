@@ -7,4 +7,11 @@ Rails.application.routes.draw do
       resources :newsfeeds, only: [:index]
     end
   end
+
+  authenticate :user, lambda { |u| u.admin == true } do
+    namespace :admin do
+      resources :newsfeeds, only: [:create, :new]
+    end
+  end
+  resources :admin, only: [:index]
 end

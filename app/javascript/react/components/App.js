@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Redirect } from "react-router-dom"
 
 import AppList from './AppList'
 import NewsFeedColumn from './NewsFeedColumn'
 
-export const App = (props) => {
+const App = (props) => {
+  const [getAdmin, setAdmin] = useState({permission: false})
   let appsArray = null
   let apps
+
+  useEffect(() =>{
+    fetch('/admin',
+    {credentials: 'same-origin'})
+    .then(response => {
+      if (response.ok) {
+        return response
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+        error = new Error(errorMessage)
+        throw error
+      }
+    })
+    .then(response => response.json())
+    .then(responseBody => {
+      setAdmin(responseBody)
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`))
+  },[])
 
   if (appsArray === null) {
     apps = (
@@ -14,9 +35,29 @@ export const App = (props) => {
       </div>
     )
   } else {
-    apps = appsArray.map(singleApp => {
-      return <AppList singleApp={singleApp} />
+    apps = appsArray.map((singleApp, index) => {
+      return <AppList
+        singleApp={singleApp}
+        key={index}
+      />
     })
+  }
+
+  let handleButtonClick = () => {
+    return <Redirect to={'/admin/newsfeeds/new'}/>
+  }
+
+  let newPost;
+  if (getAdmin.permission === true) {
+      newPost = (
+        <div
+          className='button'
+          onClick={handleButtonClick}>
+          New Newsfeed Post
+        </div>
+      )
+  } else {
+    newPost = ''
   }
 
   return (
@@ -35,6 +76,11 @@ export const App = (props) => {
         <div className='textbox'>
             <NewsFeedColumn />
         </div>
+      </div>
+      <div className='small-7'>
+      </div>
+      <div>
+        {newPost}
       </div>
     </div>
   )

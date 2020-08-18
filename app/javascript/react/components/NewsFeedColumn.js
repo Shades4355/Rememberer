@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Feed from './Feed'
 
@@ -24,10 +24,11 @@ const NewsFeedColumn = () => {
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   },[])
 
-  let feed = newsfeed.map(storyfeed => {
+  let feed = newsfeed.map((storyfeed, index) => {
     return (
       <Feed
         story={storyfeed.story}
+        key={index}
       />
     )
   })
