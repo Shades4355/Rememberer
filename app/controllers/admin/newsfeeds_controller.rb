@@ -7,6 +7,10 @@ class Admin::NewsfeedsController < ApplicationController
     render json: feed
   end
 
+  def show
+    @feed = Newsfeed.find(params['id'])
+  end
+
   def new
     @feed = Newsfeed.new
   end
@@ -20,6 +24,11 @@ class Admin::NewsfeedsController < ApplicationController
       flash[:error] = feed.errors.full_messages.to_sentence
       redirect_to '/admin/newfeeds/new'
     end
+  end
+
+  def destroy
+    binding.pry
+    feed = Newsfeed.find(params['id'])
   end
 
   private
