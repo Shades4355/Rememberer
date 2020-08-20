@@ -28,7 +28,7 @@ const NewsFeedColumn = () => {
     return (
       <Feed
         story={storyfeed.story}
-        index={storyfeed.id}
+        id={storyfeed.id}
         key={index}
       />
     )

@@ -5,5 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Newsfeed.create(story: 'Updates Coming Soon!')
-Newsfeed.create(story: 'News Feed added!')
+
+Newsfeed.create(story: "Updates Coming Soon!")
+Newsfeed.create(story: "Newsfeed added!")
+Newsfeed.create(story: "Added ability for Admins to post Newsfeed updates")

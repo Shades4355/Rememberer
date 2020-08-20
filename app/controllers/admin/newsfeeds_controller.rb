@@ -18,7 +18,7 @@ class Admin::NewsfeedsController < ApplicationController
   def create
     feed = Newsfeed.new(feed_params)
 
-    if Newsfeed.save
+    if feed.save
       redirect_to '/'
     else
       flash[:error] = feed.errors.full_messages.to_sentence
@@ -29,6 +29,6 @@ class Admin::NewsfeedsController < ApplicationController
   private
 
   def feed_params
-    params.require(:newsfeed).permit(:story)
+    params.require(:feed).permit(:story)
   end
 end

@@ -4,7 +4,7 @@ const Feed = props => {
 
   return (
     <li>
-    update {props.index}: {props.story}
+    update {props.id}: {props.story}
     </li>
   )
 }
