@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Remembery</title>
+  <title class='black-text'>Rememberer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
@@ -9,8 +9,8 @@
 </head>
 <body>
 
-  <nav class="top-bar">
-    <h1><a href="/">Remembery</a></h1>
+  <nav class="top-bar brown-background">
+    <h1><a href="/">Rememberer</a></h1>
 
     <section class="top-bar-section">
       <ul class="right">
@@ -30,7 +30,9 @@
     </div>
   <%- end -%>
 
-  <%= yield %>
+  <div class='body'>
+    <%= yield %>
+  </div>
 
   <%= javascript_include_tag 'application' %>
 

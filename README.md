@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my front end to a project that was ultimately scrapped by the project lead. I plan to work on it in my free-time to make a Minimum Viable Product.
 
-Things you may want to cover:
 
-* Ruby version
+Technical:
 
-* System dependencies
+* Ruby version: 2.7.1
 
-* Configuration
+* Rails Version: 6.0.3.2
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Database: PostgreSQL

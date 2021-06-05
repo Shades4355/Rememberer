@@ -35,14 +35,23 @@ gem "bootsnap", require: false
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "bundler", "~> 2.1.4"
-gem "devise"
-gem "foundation-rails", "~> 6.5"
-gem "jquery-rails"
-gem "rubocop", "~> 0.86.0", require: false
-gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
-gem "webpacker", "~> 3.3"
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'pry-rails', group: [:development, :test]
+gem 'jquery-rails'
+gem 'dotenv-rails', group: [:development, :test]
+gem 'rspec-rails', '3.8.2', group: [:development, :test]
+gem 'capybara', group: [:development, :test]
+gem 'launchy', group: [:development, :test]
+gem 'factory_bot', group: [:development, :test]
+gem 'database_cleaner', group: [:development, :test]
+gem 'valid_attribute', group: [:development, :test]
+gem 'shoulda-matchers', group: [:development, :test], require: false
+gem 'devise'
+gem 'foundation-rails', '~> 6.5'
+gem 'webpacker', '3.5'
 
 group :development, :test do
   gem "capybara"
@@ -61,3 +70,4 @@ group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "web-console", ">= 3.3.0"
 end
+

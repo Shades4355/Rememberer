@@ -1,0 +1,51 @@
+// colors
+$cream: #FFFEF2;
+$light-brown: #987654;
+$dark-grey: #2B2D2F;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+
+.body {
+  font-family: "Arial";
+  font-size: 25px;
+
+  background-image: url('forget-me-not.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100vh;
+  min-height: 100vh;
+}
+
+li {
+  font-size: 20px;
+}
+
+.textbox {
+  margin: auto;
+  margin-top: 0;
+  background-color: $cream;
+  border: 1px solid black;
+  opacity: 0.6;
+  border-radius: 25px;
+}
+
+h1, h2, h3, title {
+  font-family: "Sriracha";
+}
+
+.brown-background {
+  background: $light-brown;
+
+  li {
+    background-color: $light-brown;
+  }
+}
+
+.black-text, a {
+  color: black;
+  &:hover {
+    color: $dark-grey
+  }
+}
