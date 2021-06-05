@@ -1,7 +1,7 @@
 describe "User visits the Home Page" do
-  it "and sees 'Remembery' in the top bar" do
+  it "and sees 'Rememberer' in the top bar" do
     visit '/'
-    expect(page).to have_content 'Remembery'
+    expect(page).to have_content 'Rememberer'
   end
 
   it "and sees 'Sign In' in the top bar" do

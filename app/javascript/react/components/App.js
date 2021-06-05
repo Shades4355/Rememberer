@@ -63,7 +63,7 @@ const App = (props) => {
   return (
     <div className='grid-x margin-grid-x'>
       <div className='textbox small-6'>
-        <h1>Welcome to Remembery!</h1>
+        <h1>Welcome to Rememberer!</h1>
         <div>
           <ul>
             {apps}

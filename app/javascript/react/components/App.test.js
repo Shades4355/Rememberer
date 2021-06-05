@@ -9,6 +9,6 @@ let wrap = mount(<App />)
 
 describe("Welcome", () => {
   it("Users should see a 'Welcome' message", () => {
-    expect(wrap.text()).toContain("Welcome to Remembery!")
+    expect(wrap.text()).toContain("Welcome to Rememberer!")
   })
 })
