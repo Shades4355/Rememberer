@@ -24,12 +24,12 @@ const NewsFeedColumn = () => {
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   },[])
 
-  let feed = newsfeed.map((storyfeed, index) => {
+  let feed = newsfeed.map((storyfeed) => {
     return (
       <Feed
         story={storyfeed.story}
         id={storyfeed.id}
-        key={index}
+        key={storyfeed.id}
       />
     )
   })
