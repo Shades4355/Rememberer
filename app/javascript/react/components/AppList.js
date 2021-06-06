@@ -1,11 +1,13 @@
 import React from 'react'
 
-const AppList = props => {
+const AppList = (props) => {
+  let name = props.appName
+  let url = props.appURL
 
   return (
     <div>
       <li>
-        {props.singleApp}
+        <a href={url}>{name}</a>
       </li>
     </div>
   )

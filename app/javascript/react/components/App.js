@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Redirect } from "react-router-dom"
 
-import AppList from './AppList'
+import AppListColumn from './AppListColumn'
 import NewsFeedColumn from './NewsFeedColumn'
 
 const App = (props) => {
   const [getAdmin, setAdmin] = useState({permission: false})
-  let appsArray = null
-  let apps
 
   useEffect(() =>{
     fetch('/admin',
@@ -28,20 +25,24 @@ const App = (props) => {
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   },[])
 
-  if (appsArray === null) {
-    apps = (
-      <div>
-        Apps Coming Soon!
-      </div>
-    )
-  } else {
-    apps = appsArray.map((singleApp, index) => {
-      return <AppList
-        singleApp={singleApp}
-        key={index}
-      />
-    })
-  }
+
+  // if (getAppsArray === null) {
+  //   apps = (
+  //     <div>
+  //       Apps Coming Soon!
+  //     </div>
+  //   )
+  // } else {
+  //   apps = getAppsArray.map((singleApp, index) => {
+  //     return <AppList
+  //       singleApp={singleApp}
+  //       key={index}
+  //     />
+  //   })
+  // }
+
+  let apps = <AppListColumn/>
+
 
   let handleButtonClick = () => {
     return window.location.href='/admin/newsfeeds/new'
