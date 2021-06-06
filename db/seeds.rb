@@ -10,3 +10,7 @@
 Newsfeed.create(story: "Updates Coming Soon!")
 Newsfeed.create(story: "Newsfeed added!")
 Newsfeed.create(story: "Added ability for Admins to post Newsfeed updates")
+
+User.create(email: "123@456.com",
+            password: "123456",
+            admin: true)

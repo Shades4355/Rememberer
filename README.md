@@ -10,3 +10,8 @@ Technical:
 * Rails Version: 6.0.3.2
 
 * Database: PostgreSQL
+
+
+Links:
+
+* [GitHub](https://github.com/Shades4355/Rememberer)
