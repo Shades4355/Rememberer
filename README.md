@@ -15,3 +15,5 @@ Technical:
 Links:
 
 * [GitHub](https://github.com/Shades4355/Rememberer)
+
+![Home Page](https://github.com/Shades4355/Rememberer/blob/main/screenshots/home_page.png)
