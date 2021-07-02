@@ -16,4 +16,12 @@ Links:
 
 * [GitHub](https://github.com/Shades4355/Rememberer)
 
+
+Home Page:
+
 ![Home Page](https://github.com/Shades4355/Rememberer/blob/main/screenshots/home_page.png)
+
+
+Home Page - Admin View:
+
+![Home Page - Admin View](https://github.com/Shades4355/Rememberer/blob/main/screenshots/admin_view.png)
