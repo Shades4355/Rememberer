@@ -8,7 +8,7 @@ const AppListColumn = (props) => {
 
   let apps
 
-  //fetch for list of apps
+  // fetch for list of apps
 
   if (getAppsArray === null) {
     return apps = (

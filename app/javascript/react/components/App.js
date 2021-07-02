@@ -25,22 +25,6 @@ const App = (props) => {
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   },[])
 
-
-  // if (getAppsArray === null) {
-  //   apps = (
-  //     <div>
-  //       Apps Coming Soon!
-  //     </div>
-  //   )
-  // } else {
-  //   apps = getAppsArray.map((singleApp, index) => {
-  //     return <AppList
-  //       singleApp={singleApp}
-  //       key={index}
-  //     />
-  //   })
-  // }
-
   let apps = <AppListColumn/>
 
 
